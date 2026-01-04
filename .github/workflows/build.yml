@@ -3,8 +3,12 @@ name: Build
 on:
   push:
     branches: [ "master", "main" ]
+    tags: [ "v*" ]
   pull_request:
     branches: [ "master", "main" ]
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -17,11 +21,9 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Restore NuGet packages
-      working-directory: ${{env.GITHUB_WORKSPACE}}
       run: nuget restore src/Vitrite.sln
 
     - name: Build
-      working-directory: ${{env.GITHUB_WORKSPACE}}
       # Build Release configuration for x64
       run: msbuild src/Vitrite.sln /p:Configuration=Release /p:Platform=x64
 
@@ -30,3 +32,10 @@ jobs:
       with:
         name: Vitrite-x64-Release
         path: src/x64/Release/Vitrite.exe
+
+    - name: Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v2
+      with:
+        files: src/x64/Release/Vitrite.exe
+        generate_release_notes: true
