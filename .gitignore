@@ -1,0 +1,34 @@
+# Visual Studio
+.vs/
+.vscode/
+Debug/
+Release/
+x64/
+*.user
+*.suo
+*.opensdf
+*.sdf
+*.cache
+*.db
+*.opendsb
+*.pdb
+*.ipch
+
+# Build results
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.lib
+*.obj
+*.res
+*.log
+*.tlog
+*.idb
+*.ilk
+*.aps
+*.ncb
+
+# Backup
+Backup/
+_UpgradeReport_Files/

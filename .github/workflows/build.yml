@@ -1,0 +1,32 @@
+name: Build
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Restore NuGet packages
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: nuget restore src/Vitrite.sln
+
+    - name: Build
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      # Build Release configuration for x64
+      run: msbuild src/Vitrite.sln /p:Configuration=Release /p:Platform=x64
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Vitrite-x64-Release
+        path: src/x64/Release/Vitrite.exe

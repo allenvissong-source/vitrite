@@ -1,0 +1,265 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <winres.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 207, 163
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "About Vitrite"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,150,142,50,14
+    LTEXT           "Ryan VanMiddlesworth",IDC_AUTHOR,7,144,80,10
+    LTEXT           "Vitrite is a tiny utility that allows you to adjust the transparency of most visible windows using a combination of hotkeys.",
+                    IDC_TEXT1,7,7,193,18
+    LTEXT           "Just click on the window you wish to modify and press:\nCtrl+Shift+1..9 to set opacity, or Ctrl+Shift+0 to reset.",
+                    IDC_TEXT2,7,30,193,17
+    LTEXT           "Have fun,",IDC_TEXT3,7,126,43,9
+    LTEXT           "If you want to see how it works then you're in luck. The source code to Vitrite is released under the GNU General Public License. See the README.TXT for more details.",
+                    IDC_LICENSE,7,95,193,25
+    LTEXT           "Vitrite can also toggle a window's ""always on top"" behavior. Press Ctrl+Shift+Plus (the + key above '=') or Ctrl+Shift+Numpad+ to make a window stay on top of other windows. Press it again to reverse this behavior.",
+                    IDC_LICENSE2,7,55,193,33
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TRAYTIP_FORMAT          "Vitrite - %s"
+    IDS_MENU_ABOUT              "&About"
+    IDS_MENU_EXIT               "E&xit"
+    IDS_ERR_CREATEPOPUP         "CreatePopupMenu failed"
+    IDS_ERR_TRACKPOPUP          "TrackPopupMenu failed"
+    IDS_TITLE_ERROR             "Critical Error"
+    IDS_TITLE_WARNING           "Warning"
+    IDS_ERR_MUTEX_CREATE        "Unable to create mutex"
+    IDS_WARN_ALREADY_RUNNING    "Another copy of Vitrite is already running."
+    IDS_ERR_TRAYICON            "Unable to put icon on taskbar."
+    IDS_ERR_NO_HOTKEYS          "Unable to register any hotkeys.\r\nAnother program may be using them."
+    IDS_WARN_HOTKEYS_HEADER     "Some hotkeys could not be registered (already in use):\r\n"
+    IDS_WARN_HOTKEY_ALPHA_LINE  "  - Ctrl+Shift+%d\r\n"
+    IDS_WARN_HOTKEY_PLUS_MAIN   "  - Ctrl+Shift+Plus (main keyboard)\r\n"
+    IDS_WARN_HOTKEY_PLUS_NUMPAD "  - Ctrl+Shift+Numpad+\r\n"
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include <winres.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(65001)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 207, 163
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "关于 Vitrite"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,150,142,50,14
+    LTEXT           "Ryan VanMiddlesworth",IDC_AUTHOR,7,144,120,10
+    LTEXT           "Vitrite 是一个小工具，可通过快捷键调整大多数可见窗口的透明度。",
+                    IDC_TEXT1,7,7,193,18
+    LTEXT           "点击要修改的窗口后按：\nCtrl+Shift+1..9 设置透明度，或 Ctrl+Shift+0 恢复。",
+                    IDC_TEXT2,7,30,193,17
+    LTEXT           "祝使用愉快，",IDC_TEXT3,7,126,60,9
+    LTEXT           "如果你想了解它的工作原理，你很幸运：Vitrite 的源代码以 GNU GPL 协议发布。更多信息请参见 README。",
+                    IDC_LICENSE,7,95,193,25
+    LTEXT           "Vitrite 也可以切换窗口的“置顶”状态。按 Ctrl+Shift+加号（= 键上，需要 Shift；或 Ctrl+Shift+小键盘+）让窗口置顶，再按一次取消。",
+                    IDC_LICENSE2,7,55,193,33
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TRAYTIP_FORMAT          "Vitrite - %s"
+    IDS_MENU_ABOUT              "关于(&A)"
+    IDS_MENU_EXIT               "退出(&X)"
+    IDS_ERR_CREATEPOPUP         "创建弹出菜单失败"
+    IDS_ERR_TRACKPOPUP          "弹出菜单失败"
+    IDS_TITLE_ERROR             "严重错误"
+    IDS_TITLE_WARNING           "警告"
+    IDS_ERR_MUTEX_CREATE        "无法创建互斥体"
+    IDS_WARN_ALREADY_RUNNING    "Vitrite 已在运行。"
+    IDS_ERR_TRAYICON            "无法在通知区域显示图标。"
+    IDS_ERR_NO_HOTKEYS          "无法注册任何热键。\r\n可能已被其它程序占用。"
+    IDS_WARN_HOTKEYS_HEADER     "部分热键注册失败（可能已被占用）：\r\n"
+    IDS_WARN_HOTKEY_ALPHA_LINE  "  - Ctrl+Shift+%d\r\n"
+    IDS_WARN_HOTKEY_PLUS_MAIN   "  - Ctrl+Shift+加号（主键盘，= 键上）\r\n"
+    IDS_WARN_HOTKEY_PLUS_NUMPAD "  - Ctrl+Shift+小键盘+\r\n"
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Japanese (Japan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(65001)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 207, 163
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Vitrite について"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,150,142,50,14
+    LTEXT           "Ryan VanMiddlesworth",IDC_AUTHOR,7,144,120,10
+    LTEXT           "Vitrite は、ホットキーを使ってほとんどのウィンドウの透明度を調整できる小さなユーティリティです。",
+                    IDC_TEXT1,7,7,193,18
+    LTEXT           "対象のウィンドウをクリックして、Ctrl+Shift+1..9 で透明度を設定、Ctrl+Shift+0 でリセットします。",
+                    IDC_TEXT2,7,30,193,17
+    LTEXT           "楽しんでください。",IDC_TEXT3,7,126,60,9
+    LTEXT           "仕組みを知りたい場合は、運が良いです。Vitrite のソースコードは GNU General Public License で公開されています。詳細は README をご覧ください。",
+                    IDC_LICENSE,7,95,193,25
+    LTEXT           "Vitrite はウィンドウの「常に手前に表示」を切り替えることもできます。Ctrl+Shift+Plus（「=」キーの上）または Ctrl+Shift+Numpad+ を押すと、ウィンドウが常に手前に表示されます。もう一度押すと元に戻ります。",
+                    IDC_LICENSE2,7,55,193,33
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TRAYTIP_FORMAT          "Vitrite - %s"
+    IDS_MENU_ABOUT              "バージョン情報(&A)"
+    IDS_MENU_EXIT               "終了(&X)"
+    IDS_ERR_CREATEPOPUP         "CreatePopupMenu に失敗しました"
+    IDS_ERR_TRACKPOPUP          "TrackPopupMenu に失敗しました"
+    IDS_TITLE_ERROR             "重大なエラー"
+    IDS_TITLE_WARNING           "警告"
+    IDS_ERR_MUTEX_CREATE        "ミューテックスを作成できません"
+    IDS_WARN_ALREADY_RUNNING    "Vitrite は既に実行中です。"
+    IDS_ERR_TRAYICON            "タスクトレイにアイコンを表示できません。"
+    IDS_ERR_NO_HOTKEYS          "ホットキーを登録できませんでした。\r\n他のプログラムで使用されている可能性があります。"
+    IDS_WARN_HOTKEYS_HEADER     "一部のホットキーを登録できませんでした（既に使用されています）：\r\n"
+    IDS_WARN_HOTKEY_ALPHA_LINE  "  - Ctrl+Shift+%d\r\n"
+    IDS_WARN_HOTKEY_PLUS_MAIN   "  - Ctrl+Shift+Plus (メインキーボード)\r\n"
+    IDS_WARN_HOTKEY_PLUS_NUMPAD "  - Ctrl+Shift+Numpad+\r\n"
+END
+
+#endif    // Japanese (Japan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
